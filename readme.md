@@ -1,17 +1,17 @@
-# quee
+# qee
 
 Queue base class and readymades
 
 ## Install
 
 ```sh
-$ npm install quee
+$ npm install qee
 ```
 
 ## Use
 
 ```js
-import Transform from 'quee/source/Transform';
+import Transform from 'qee/source/Transform';
 
 let queue = new TransformQueue(...transforms).process(data);
 ```
@@ -19,7 +19,7 @@ let queue = new TransformQueue(...transforms).process(data);
 ## Extend
 
 ```js
-import Queue from 'quee'
+import Queue from 'qee'
 
 class ChildQueue extends Queue {
 	process(args) {
