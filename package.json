@@ -20,7 +20,8 @@
 	},
 
 	"files" : [
-		"source"
+		"source/Queue.js",
+		"source/Transform.js"
 	],
 
 	"main" : "source/Queue.js",
