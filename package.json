@@ -1,7 +1,7 @@
 {
 	"name": "qee",
 	"description" : "Extensible Queues",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"license" : "MIT",
 
 	"author" : {
@@ -22,7 +22,9 @@
 
 	"files" : [
 		"source/Queue.js",
-		"source/Transform.js"
+		"source/Transform.js",
+		"dist/Queue.js",
+		"dist/Transform.js"
 	],
 
 	"main" : "dist/Queue.js",
