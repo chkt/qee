@@ -44,24 +44,28 @@ export default class Queue {
 	}
 
 	remove(...fns) {
-		const q = _q.get(this), p = [];
+		const q = _q.get(this), p = q.slice(0);
 
 		for (let fn of fns) {
 			if (typeof fn !== 'function') throw new TypeError();
 
-			const index = q.indexOf(fn);
+			const index = p.indexOf(fn);
 
-			if (index !== -1) p.push(index);
+			if (index !== -1) p.splice(index, 1);
 		}
 
-		for (let index of p) q.splice(index, 1);
+		q.splice(0, q.length, ...p);
 
 		return this;
 	}
 
 
 	clear() {
-		_q.set(this, []);
+		const q = _q.get(this);
+
+		q.splice(0, q.length);
+
+		return this;
 	}
 
 
